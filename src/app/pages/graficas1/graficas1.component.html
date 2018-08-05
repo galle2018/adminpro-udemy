@@ -1,3 +1,100 @@
-<p>
-  graficas1 works!
-</p>
+<!-- ************************************************* INICIO GRAFICA DONA 1 ***************************************************************************** -->
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title" style="text-align: center">{{graficos.grafico1.leyenda}}</h4>
+
+                <app-grafico-dona [chartLabels]="graficos.grafico1.labels" [chartData]="graficos.grafico1.data" chartType="doughnut"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ************************************************* FIN GRAFICA DONA 1 ***************************************************************************** ************************************************* INICIO GRAFICA BARRAS ***************************************************************************** -->
+
+    <!-- ************************************************* INICIO GRAFICA DONA 2 ***************************************************************************** -->
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title" style="text-align: center">{{graficos.grafico2.leyenda}}</h4>
+                <app-grafico-dona [chartLabels]="graficos.grafico2.labels" [chartData]="graficos.grafico2.data" chartType="doughnut"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+    <!-- ************************************************* FIN GRAFICA DONA 2 ***************************************************************************** ************************************************* INICIO GRAFICA BARRAS ***************************************************************************** -->
+</div>
+<!-- ************************************************* INICIO GRAFICA DONA 3 ***************************************************************************** -->
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title" style="text-align: center">{{graficos.grafico3.leyenda}}</h4>
+                <app-grafico-dona [chartLabels]="graficos.grafico3.labels" [chartData]="graficos.grafico3.data" chartType="doughnut"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ************************************************* FIN GRAFICA DONA 3 ***************************************************************************** ************************************************* INICIO GRAFICA BARRAS ***************************************************************************** -->
+
+    <!-- ************************************************* INICIO GRAFICA DONA 4 ***************************************************************************** -->
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title" style="text-align: center">{{graficos.grafico4.leyenda}}</h4>
+                <app-grafico-dona [chartLabels]="graficos.grafico4.labels" [chartData]="graficos.grafico4.data" chartType="doughnut"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+    <!-- ************************************************* FIN GRAFICA DONA 4 ***************************************************************************** ************************************************* INICIO GRAFICA BARRAS ***************************************************************************** -->
+</div>
+
+<!-- ************************************************* INICIO Bar Chart ***************************************************************************** -->
+<!-- <div class="row">
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1>Gráfica Bar Chart</h1>
+
+                <div>
+                    <div style="display: block">
+                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                    <button (click)="randomize()">Update</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div> -->
+<!-- ************************************************* FIN Bar Chart ***************************************************************************** -->
+
+
+<!-- ************************************************* INICIO Pie Chart ***************************************************************************** -->
+<!-- <div class="row">
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1>Gráfica Pie Chart</h1>
+
+                <div style="display: block">
+                    <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div> -->
+<!-- ************************************************* FIN Pie Chart ***************************************************************************** -->

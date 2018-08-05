@@ -1,3 +1,118 @@
-<p>
-  progress works!
-</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Barra de progreso</h4>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" [attr.aria-Valuenow]="progreso1" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'" style="width: 50%"></div>
+                </div>
+
+                <br>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.aria-Valuenow]="progreso2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'" style="width: 50%"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body" style="text-align: center">
+
+                <!-- en la linea de abajo el nombre="Progress Bar Roja" es un Input y
+                 (cambioValor)="actualizar" es un Output -->
+                <!-- <app-incrementador (cambioValor)="actualizar($event)" nombre="Progress Bar Roja" [progreso]="progreso1"></app-incrementador> -->
+                <app-incrementador (actualizaValor)="progreso1=$event" nombre="Progress Bar Roja" [progreso]="progreso1"></app-incrementador>
+                <!-- [progreso]="20" cuando uso las llaves envio el valor numerico, de lo contrario va string -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body" style="text-align: center">
+
+                <app-incrementador (actualizaValor)="progreso2=$event" nombre="Progress Bar Verde" [progreso]="progreso2"></app-incrementador>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contador de la izq -->
+    <div class="col-6 ">
+        <div class="card ">
+            <div class="card-body " style="padding-left: 100px ">
+
+                <div style="width: 350px; text-align: center; background: red; border-radius: 20px; height: 170px ">
+                    <h1 style="font-size: 200px; color: white; padding-top: 65px ">
+                        {{progreso1}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contador Derecha -->
+    <div class="col-6 ">
+        <div class="card ">
+            <div class="card-body " style="padding-left: 100px ">
+
+                <div style="width: 350px; text-align: center; background: green; border-radius: 20px; height: 170px ">
+                    <h1 style="font-size: 200px; color: white; padding-top: 65px ">
+                        {{progreso2}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado -->
+    <div class="col-6 " style="margin-left: 280px; text-align: center">
+        <button class="btn btn-danger" type="button" (click)="cerar()">
+          CE
+        </button>
+        <button class="btn btn-success" type="button" (click)="suma()">
+          <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-danger" type="button" (click)="resta()">
+          <i class="mdi mdi-minus"></i>
+        </button>
+        <button class="btn btn-primary" type="button" (click)="multiplicar()">
+          <i class="mdi mdi-multiplication"></i>
+        </button>
+        <button class="btn btn-warning" type="button" (click)="dividir()">
+          /
+        </button>
+        <button class="btn btn-success" type="button" (click)="porcentaje()">
+          <i class="mdi mdi-percent"></i>
+
+        </button>
+        <button class="btn btn-primary" type="button" (click)="raizcuad()">
+          <i class="mdi mdi-format-superscript"></i>
+        </button>
+    </div>
+
+    <div class="col-6 " style="margin-left: 280px">
+        <div class=" card ">
+            <div class="card-body ">
+                <h4 style="text-align: center">{{accion}}</h4>
+                <div style="width: 500px; text-align: center; background: blue; border-radius: 20px; height: 170px ">
+                    <h1 style="font-size: 200px; color: white; padding-top: 65px " name="mostrar">
+                        {{resultado}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
