@@ -181,8 +181,8 @@
                                         <img src="assets/images/users/1.jpg" alt="user">
                                     </div>
                                     <div class="u-text">
-                                        <h4>Steave Jobs</h4>
-                                        <p class="text-muted">varun@gmail.com</p>
+                                        <h4>Héctor Oliva</h4>
+                                        <p class="text-muted">holivasilva@gmail.com</p>
                                         <a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
                                     </div>
                                 </div>
@@ -190,25 +190,29 @@
                             <li role="separator" class="divider"></li>
                             <li>
                                 <a href="#">
-                                    <i class="ti-user"></i> My Profile</a>
+                                    <i class="ti-user"></i> Mi perfil</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="ti-wallet"></i> My Balance</a>
+                                    <i class="ti-wallet"></i> Mi balance</a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="ti-email"></i> Inbox</a>
-                            </li>
+
+                            <li><a href="#"><i class="ti-email"></i> Bandeja de entrada</a></li>
+
                             <li role="separator" class="divider"></li>
+
                             <li>
-                                <a href="#">
-                                    <i class="ti-settings"></i> Account Setting</a>
+                                <!-- <a href="#"><i class="ti-settings"></i> Configuración Tema</a> -->
+                                <a routerLinkActive="active" routerLink="/account-settings"><i class="ti-settings"></i> Configuración Tema</a>
                             </li>
+
                             <li role="separator" class="divider"></li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <i class="fa fa-power-off"></i> Logout</a>
+                            </li> -->
+                            <li>
+                                <a routerLink="/login"><i class="fa fa-power-off"></i> Logout</a>
                             </li>
                         </ul>
                     </div>
